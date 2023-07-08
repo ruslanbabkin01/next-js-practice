@@ -1,9 +1,9 @@
 export default function Head() {
   return (
     <>
-      <title>Create Next App</title>
+      <title>About Page</title>
       <meta content='width=device-width, initial-scale=1' name='viewport' />
-      <meta name='description' content='Create by create next app' />
+      <meta name='description' content='Create by Ruslan' />
       <link rel='icon' href='/favicon.ico' />
     </>
   )

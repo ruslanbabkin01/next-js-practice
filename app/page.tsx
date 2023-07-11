@@ -1,16 +1,8 @@
-import Link from 'next/link'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   // throw new Error('not today')
-  return (
-    <main>
-      <h1>Hello there</h1>
-      <p>
-        <Link href='/about'>Go to About Page</Link>
-      </p>
-      <p>
-        <Link href='/users'>Go to Users Page</Link>
-      </p>
-    </main>
-  )
+  return <main className={inter.className}></main>
 }

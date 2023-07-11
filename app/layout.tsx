@@ -1,8 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import NavBar from './components/NavBar'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -16,10 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className} suppressHydrationWarning={true}>
-        <nav>
-          <h1>My NavBar</h1>
-        </nav>
+      <body suppressHydrationWarning={true} className='bg-slate-800'>
+        <NavBar />
         {children}
       </body>
     </html>

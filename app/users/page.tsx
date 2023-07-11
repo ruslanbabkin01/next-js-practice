@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: 'Users',
 }
 
+// ISR, ревалідація на рівні сторінки
+// - оновлення тільки при додаванні нових даних
+export const revalidate = 60 // revalidate this page every 60 seconds
+
 export default async function UsersPage() {
   const userData: Promise<User[]> = getAllUsers()
 

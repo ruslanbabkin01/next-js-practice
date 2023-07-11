@@ -23,7 +23,6 @@ export async function generateMetadata({
       title: 'User Not Found',
     }
   }
-
   return {
     title: user.name,
     description: `This is a page of ${user.name}`,
@@ -32,9 +31,9 @@ export async function generateMetadata({
 
 export default async function UserPage({ params: { userId } }: Params) {
   const userData: Promise<User> = getUser(userId)
-
   const userPostData: Promise<Post[]> = getUserPosts(userId)
 
+  // If not progressively rendering with Suspense, use Promise.all
   // const [user, userPost] = await Promise.all([userData, userPostData])
 
   const user = await userData
@@ -51,6 +50,8 @@ export default async function UserPage({ params: { userId } }: Params) {
     </>
   )
 }
+
+// робимо сторінку SSG
 
 export async function generateStaticParams() {
   const userData: Promise<User[]> = getAllUsers()
